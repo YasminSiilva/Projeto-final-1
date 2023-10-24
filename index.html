@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Loja de Bebidas</title>
+        <meta charset="UTF-8">
+        <script>
+        function Whisky(nome, preco) {
+            this.nome = nome; 
+            this.preco = preco;
+        }
+        
+        function Energetico(nome, preco) { 
+            this.nome = nome; 
+            this.preco = preco;
+         } 
+         function Gelo(nome, preco) { 
+            this.nome = nome; 
+            this.preco = preco; }
+            
+            const whisky1 = new Whisky("Johnnie Walker - Black Label", 70); 
+            const whisky2 = new Whisky("Johnnie Walker - Green Label", 85); 
+            const whisky3 = new Whisky("Johnnie Walker - Blue Label", 100);
+            const whisky4 = new Whisky("Johnnie Walker - Gold Label", 65); 
+            const whisky5 = new Whisky("White Horse", 45);
+            const whisky6 = new Whisky("Ballantines", 45); 
+
+            const energetico1 = new Energetico("Red Bull Original", 7);
+            const energetico2 = new Energetico("Baly Original", 5); 
+            const energetico3 = new Energetico("Baly Melancia", 5); 
+            const energetico4 = new Energetico("Baly Cranberry", 5);
+            const energetico5 = new Energetico("Baly Maca Verde", 5); 
+            const energetico6 = new Energetico("Tsunami Original", 5); 
+
+            const gelo1 = new Gelo("Gelo de Coco", 10);
+            const gelo2 = new Gelo("Gelo de Maracujá", 10);
+            const gelo3 = new Gelo("Gelo de Melancia", 10);
+            const gelo4 = new Gelo("Gelo de Morango", 10);
+            const gelo5 = new Gelo("Gelo Original", 5);
+
+            console.log(whisky1, whisky2, whisky3, whisky4, whisky5, whisky6);
+            console.log(energetico1, energetico2, energetico3, energetico4, energetico5, energetico6); 
+            console.log(gelo1, gelo2, gelo3, gelo4, gelo5); 
+
+            let combo1 = prompt("Informe o whisky que deseja (1 a 6): "); 
+            let combo2 = prompt("Informe o energético que deseja (1 a 6): "); 
+            let combo3 = prompt("Informe o gelo que deseja (1 a 5): ");
+            
+            combo1 = parseInt(combo1); combo2 = parseInt(combo2);
+            combo3 = parseInt(combo3); if (combo1 >= 1 && combo1 <= 6 && combo2 >= 1 && combo2 <= 6 && combo3 >=1 && combo3<=5) 
+            { 
+                 const selectedWhisky = [whisky1, whisky2, whisky3, whisky4, whisky5, whisky6][combo1 - 1];
+                  const selectedEnergetico = [energetico1, energetico2, energetico3, energetico4, energetico5, energetico6][combo2 - 1];
+                  const selectedGelo = [gelo1, gelo2, gelo3, gelo4, gelo5][combo3 - 1] 
+                  const total = selectedWhisky.preco + selectedEnergetico.preco + selectedGelo 
+                  ("Você selecionou o combo: " + selectedWhisky.nome + " + " + selectedEnergetico.nome + selectedGelo.nome +"\nO preço total é R$" + total);
+                } else 
+                 { 
+                    alert("Opção inválida. Por favor, escolha um número de válido."); }
+
+
+
+
+        </script>
+    </head>
+    <body>
+    </body>
+</html>
